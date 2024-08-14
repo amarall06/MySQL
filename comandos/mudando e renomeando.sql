@@ -3,16 +3,16 @@ desc gafanhotos;
 alter table pessoas
 rename to gafanhotos;
 
-alter table pessoas
+alter table gafanhotos
 add column profissao varchar(10) after nome;
 
-alter table pessoas
+alter table gafanhotos
 modify column profissao varchar(20) not null default '';
 
-alter table pessoas
+alter table gafanhotos
 change column profissao prof varchar(20);
 
-alter table pessoas
-drop column profissao;
+alter table gafanhotos
+drop column prof;
 
-select * from pessoas;
+select * from gafanhotos;

@@ -1,8 +1,13 @@
-create table pessoas(
-nome varchar(30),
-idade tinyint,
-sexo char(1),
-peso float,
-altura float,
-nacionalidade varchar(20)
-);
+create table gafanhotos(
+id int not null auto_increment,
+nome varchar(30) not null,
+nascimento date,
+sexo enum('M','F'),
+peso decimal (5,2),
+altura decimal(3,2),
+nacionalidade varchar(20) default 'Brasil',
+primary key (id)
+) DEFAULT charset = utf8;
+
+
+drop table gafanhotos;
